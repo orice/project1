@@ -1,0 +1,37 @@
+<%= form_for(@hand_analytic) do |f| %>
+  <% if @hand_analytic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hand_analytic.errors.count, "error") %> prohibited this hand_analytic from being saved:</h2>
+
+      <ul>
+      <% @hand_analytic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :flop %><br>
+    <%= f.text_field :flop %>
+  </div>
+  <div class="field">
+    <%= f.label :river %><br>
+    <%= f.text_field :river %>
+  </div>
+  <div class="field">
+    <%= f.label :turn %><br>
+    <%= f.text_field :turn %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_players %><br>
+    <%= f.number_field :number_of_players %>
+  </div>
+  <div class="field">
+    <%= f.label :my_hand %><br>
+    <%= f.text_field :my_hand %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

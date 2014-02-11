@@ -1,0 +1,35 @@
+<h1>Listing hand_analytics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Flop</th>
+      <th>River</th>
+      <th>Turn</th>
+      <th>Number of players</th>
+      <th>My hand</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hand_analytics.each do |hand_analytic| %>
+      <tr>
+        <td><%= hand_analytic.flop %></td>
+        <td><%= hand_analytic.river %></td>
+        <td><%= hand_analytic.turn %></td>
+        <td><%= hand_analytic.number_of_players %></td>
+        <td><%= hand_analytic.my_hand %></td>
+        <td><%= link_to 'Show', hand_analytic %></td>
+        <td><%= link_to 'Edit', edit_hand_analytic_path(hand_analytic) %></td>
+        <td><%= link_to 'Destroy', hand_analytic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hand analytic', new_hand_analytic_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Flop:</strong>
+  <%= @hand_analytic.flop %>
+</p>
+
+<p>
+  <strong>River:</strong>
+  <%= @hand_analytic.river %>
+</p>
+
+<p>
+  <strong>Turn:</strong>
+  <%= @hand_analytic.turn %>
+</p>
+
+<p>
+  <strong>Number of players:</strong>
+  <%= @hand_analytic.number_of_players %>
+</p>
+
+<p>
+  <strong>My hand:</strong>
+  <%= @hand_analytic.my_hand %>
+</p>
+
+<%= link_to 'Edit', edit_hand_analytic_path(@hand_analytic) %> |
+<%= link_to 'Back', hand_analytics_path %>

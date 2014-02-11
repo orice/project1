@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  pokername: MyString
+  rank: MyString
+  email: MyString
+
+two:
+  name: MyString
+  pokername: MyString
+  rank: MyString
+  email: MyString
